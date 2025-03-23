@@ -59,22 +59,6 @@ El archivo `main.js` incluye las siguientes funcionalidades:
 - Efectos interactivos en tarjetas (hover)
 - Observadores de intersección para animaciones
 
-```javascript
-// Ejemplo de función para animación suave al hacer scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-```
-
 ## 🎨 Características de CSS
 
 El archivo `styles.css` incluye:
@@ -84,14 +68,6 @@ El archivo `styles.css` incluye:
 - Animaciones y transiciones
 - Grid y Flexbox para layouts modernos
 - Efectos de hover en elementos interactivos
-
-## 🔄 Actualizaciones Futuras
-
-- [ ] Implementar modo oscuro
-- [ ] Agregar formulario de contacto funcional
-- [ ] Incorporar página de blog
-- [ ] Añadir portafolio de proyectos
-- [ ] Implementar selector de idiomas
 
 ## 📄 Licencia
 
