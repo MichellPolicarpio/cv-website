@@ -1,5 +1,6 @@
 /* Definición de variables de colores y estilos globales */
 :root {
+    /* Tema claro (default) */
     --primary-color: #2c3e50;    /* Color principal (azul oscuro) */
     --secondary-color: #3498db;   /* Color secundario (azul claro) */
     --accent-color: #e74c3c;      /* Color de acento (rojo) */
@@ -7,6 +8,25 @@
     --light-bg: #f8f9fa;          /* Color de fondo claro */
     --white: #ffffff;             /* Color blanco */
     --navbar-height: 60px;        /* Altura de la barra de navegación reducida */
+    --card-bg: #ffffff;
+    --shadow-color: rgba(0,0,0,0.1);
+}
+
+/* Variables para modo oscuro */
+[data-theme="dark"] {
+    --primary-color: #4a9eff;          /* Azul más claro para mejor visibilidad */
+    --secondary-color: #64b5ff;        /* Azul secundario más brillante */
+    --accent-color: #ff6b6b;           /* Rojo acentuado */
+    --text-color: #ffffff;             /* Texto blanco para mejor contraste */
+    --light-bg: #1a1a2e;              /* Fondo oscuro */
+    --white: #2a2a3e;                 /* Color para elementos de fondo */
+    --card-bg: #2a2a3e;               /* Color para tarjetas */
+    --shadow-color: rgba(0,0,0,0.3);
+    --footer-text: #ffffff;           /* Texto del footer */
+    --footer-bg: #151525;             /* Fondo del footer */
+    --nav-text: #ffffff;              /* Texto de navegación */
+    --card-text: #ffffff;             /* Texto en tarjetas */
+    --link-hover: #64b5ff;            /* Color hover para enlaces */
 }
 
 /* Reseteo de estilos básicos para todos los elementos */
@@ -14,7 +34,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;  /* Incluye padding y border en el ancho total */
-    scroll-margin-top: calc(var(--navbar-height) + 1rem); /* Ajuste más preciso del scroll */
+    scroll-margin-top: calc(var(--navbar-height) + 0.5rem); /* Reducido de 1rem a 0.5rem */
 }
 
 /* Comportamiento suave del scroll */
@@ -27,6 +47,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
+    background-color: var(--light-bg);
 }
 
 /* Contenedor principal que centra el contenido y establece un ancho máximo */
@@ -41,7 +62,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: var(--white);
+    background-color: var(--card-bg);
     padding: 0.75rem 2rem;  /* Padding reducido */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);  /* Sombra suave */
     z-index: 1000;  /* Asegura que esté por encima de otros elementos */
@@ -70,7 +91,11 @@ body {
     text-decoration: none;
     color: var(--primary-color);
     font-weight: 500;
-    transition: color 0.3s ease;  /* Animación suave al cambiar color */
+    transition: color 0.3s ease;
+}
+
+[data-theme="dark"] .nav-menu a {
+    color: var(--nav-text);
 }
 
 /* Efecto hover en los enlaces */
@@ -87,27 +112,33 @@ body {
 
 /* Contenido principal */
 main {
-    padding-top: var(--navbar-height);  /* Espacio para la barra de navegación fija */
-    margin-top: 0;  /* Eliminamos el margin-top anterior */
+    padding-top: calc(var(--navbar-height) - 0.5rem); /* Reducido el padding superior */
+    margin-top: 0;
 }
 
 /* Estilos comunes para todas las secciones */
 .section {
-    padding: 2rem 2rem;  /* Padding reducido */
+    padding: 1.5rem 2rem; /* Reducido de 2rem a 1.5rem */
 }
 
 /* Sección de inicio */
 #inicio {
     background-color: var(--light-bg);
-    padding-top: 1.5rem;  /* Padding superior reducido */
+    padding-top: 0.75rem; /* Reducido de 1rem */
+}
+
+/* Título principal */
+h1 {
+    margin-bottom: 1.5rem;  /* Reducido del valor anterior si existía */
+    font-size: 2rem;
 }
 
 /* Tarjeta de información del perfil */
 .profile-info {
-    background-color: var(--white);
+    background-color: var(--card-bg);
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 10px var(--shadow-color);
 }
 
 /* Contenedor de la foto y texto del perfil */
@@ -171,9 +202,9 @@ main {
     align-items: center;
     gap: 0.5rem;
     padding: 1rem;
-    background-color: var(--white);
+    background-color: var(--card-bg);
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px var(--shadow-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -194,6 +225,10 @@ main {
     font-size: 0.9rem;
     color: var(--text-color);
     font-weight: 500;
+}
+
+[data-theme="dark"] .skill-item span {
+    color: var(--card-text);
 }
 
 /* Enlaces sociales */
@@ -226,10 +261,10 @@ main {
 
 /* Tarjetas de intereses */
 .interest-card {
-    background-color: var(--white);
+    background-color: var(--card-bg);
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 10px var(--shadow-color);
     text-align: center;
     transition: transform 0.3s ease;
 }
@@ -259,13 +294,13 @@ main {
 
 /* Tarjeta de certificación */
 .cert-card {
-    background-color: var(--white);
+    background-color: var(--card-bg);
     padding: 2rem;
     border-radius: 10px;
     display: flex;
     align-items: center;
     gap: 2rem;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 10px var(--shadow-color);
     margin-top: 2rem;
     transition: transform 0.3s ease;
 }
@@ -298,6 +333,10 @@ main {
     line-height: 1.6;
 }
 
+[data-theme="dark"] .cert-info p {
+    color: var(--card-text);
+}
+
 /* Sección de contacto */
 .contact-section {
     background-color: var(--light-bg);
@@ -313,11 +352,11 @@ main {
 
 /* Tarjetas de contacto */
 .contact-card {
-    background-color: var(--white);
+    background-color: var(--card-bg);
     padding: 2rem;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 10px var(--shadow-color);
     transition: transform 0.3s ease;
 }
 
@@ -367,11 +406,11 @@ main {
 
 /* Tarjetas de servicios */
 .service-card {
-    background-color: var(--white);
+    background-color: var(--card-bg);
     padding: 2rem;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 10px var(--shadow-color);
     transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -408,6 +447,10 @@ main {
     font-size: 0.95rem;
 }
 
+[data-theme="dark"] .service-card p {
+    color: var(--card-text);
+}
+
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
     /* Menú de navegación móvil */
@@ -434,20 +477,17 @@ main {
 
     /* Ajustes de espaciado para móvil */
     .section {
-        padding: 2rem 1rem;
+        padding: 1rem 1rem; /* Reducido de 1.5rem a 1rem */
     }
 
     #inicio {
-        padding-top: 1.5rem;
+        padding-top: 0.5rem; /* Reducido de 0.75rem */
     }
 
     /* Ajustes de tamaño de texto para móvil */
     h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
+        margin-bottom: 1rem;  /* Más compacto en móvil */
+        font-size: 1.75rem;  /* Ligeramente más pequeño en móvil */
     }
 
     /* Ajustes de perfil para móvil */
@@ -498,7 +538,11 @@ main {
     }
 
     main {
-        margin-top: 50px;
+        margin-top: 30px; /* Reducido de 50px */
+    }
+
+    .profile-info {
+        margin-top: 0.75rem; /* Reducido de 1rem */
     }
 }
 
@@ -508,6 +552,11 @@ footer {
     color: var(--white);
     padding: 3rem 0;
     margin-top: 4rem;
+}
+
+[data-theme="dark"] footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
 }
 
 .footer-content {
@@ -528,6 +577,10 @@ footer {
     position: relative;
 }
 
+[data-theme="dark"] .footer-section h3 {
+    color: var(--footer-text);
+}
+
 .footer-section h3::after {
     content: '';
     position: absolute;
@@ -538,9 +591,17 @@ footer {
     background-color: var(--secondary-color);
 }
 
+[data-theme="dark"] .footer-section h3::after {
+    background-color: var(--footer-text);
+}
+
 .footer-section p {
     margin-bottom: 1rem;
     line-height: 1.8;
+}
+
+[data-theme="dark"] .footer-section p {
+    color: var(--footer-text);
 }
 
 .footer-links {
@@ -560,8 +621,16 @@ footer {
     gap: 0.5rem;
 }
 
+[data-theme="dark"] .footer-links a {
+    color: var(--footer-text);
+}
+
 .footer-links a:hover {
     color: var(--secondary-color);
+}
+
+[data-theme="dark"] .footer-links a:hover {
+    color: var(--link-hover);
 }
 
 .footer-social {
@@ -576,8 +645,16 @@ footer {
     transition: color 0.3s ease;
 }
 
+[data-theme="dark"] .footer-social a {
+    color: var(--footer-text);
+}
+
 .footer-social a:hover {
     color: var(--secondary-color);
+}
+
+[data-theme="dark"] .footer-social a:hover {
+    color: var(--link-hover);
 }
 
 .footer-bottom {
@@ -590,6 +667,10 @@ footer {
 .footer-bottom p {
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.8);
+}
+
+[data-theme="dark"] .footer-bottom p {
+    color: var(--footer-text);
 }
 
 /* Ajustes responsivos para el footer */
@@ -611,4 +692,47 @@ footer {
     .footer-social {
         justify-content: center;
     }
+}
+
+/* Botón de cambio de tema */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+    margin-left: 1rem;
+}
+
+[data-theme="dark"] .theme-toggle {
+    color: var(--nav-text);
+}
+
+.theme-toggle:hover {
+    color: var(--secondary-color);
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+    color: var(--link-hover);
+}
+
+/* Ajustes adicionales para modo oscuro */
+[data-theme="dark"] .nav-brand {
+    color: var(--nav-text);
+}
+
+[data-theme="dark"] .skill-item span,
+[data-theme="dark"] .service-card p,
+[data-theme="dark"] .interest-card p,
+[data-theme="dark"] .cert-info p {
+    color: var(--card-text);
+}
+
+[data-theme="dark"] .nav-menu.active {
+    background-color: var(--card-bg);
 } 
