@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadatos básicos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi CV Profesional</title>
+    
+    <!-- Hojas de estilo -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Devicon para iconos de tecnologías -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+<body>
+    <!-- Barra de navegación fija -->
+    <nav class="navbar">
+        <div class="nav-brand">Michell Policarpio</div>
+        <!-- Botón hamburguesa para móvil -->
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <!-- Menú de navegación -->
+        <ul class="nav-menu">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li>
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Sección de inicio con información personal -->
+        <section id="inicio" class="section">
+            <div class="container">
+                <h1>Bienvenido a mi CV</h1>
+                <div class="profile-info">
+                    <!-- Cabecera del perfil con foto e información -->
+                    <div class="profile-header">
+                        <img src="mapm.jpg" alt="Mi foto de perfil" class="profile-image">
+                        <div class="profile-text">
+                            <h2>Información Personal</h2>
+                            <p>Estudiante de la Universidad Veracruzana (2021-2026)</p>
+                            <p>Graduado de Ciencia de Datos en Samsung Innovation Campus</p>
+                            <p>Participante del NASA Space Apps Challenge 2024 - Sede Boca del Río, Veracruz</p>
+                        </div>
+                    </div>
+                    <!-- Sección de habilidades técnicas -->
+                    <div class="skills">
+                        <h3>Habilidades Técnicas</h3>
+                        <div class="skills-grid">
+                            <!-- Iconos de lenguajes de programación -->
+                            <div class="skill-item">
+                                <i class="devicon-c-plain"></i>
+                                <span>C</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-cplusplus-plain"></i>
+                                <span>C++</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-python-plain"></i>
+                                <span>Python</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-java-plain"></i>
+                                <span>Java</span>
+                            </div>
+                            <!-- Iconos de tecnologías web -->
+                            <div class="skill-item">
+                                <i class="devicon-html5-plain"></i>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-css3-plain"></i>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-javascript-plain"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <!-- Iconos de bases de datos -->
+                            <div class="skill-item">
+                                <i class="devicon-mysql-plain"></i>
+                                <span>MySQL</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-postgresql-plain"></i>
+                                <span>PostgreSQL</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-mongodb-plain"></i>
+                                <span>MongoDB</span>
+                            </div>
+                            <!-- Iconos de desarrollo móvil -->
+                            <div class="skill-item">
+                                <i class="devicon-swift-plain"></i>
+                                <span>Swift</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Enlaces a redes sociales -->
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/michell-alexis-policarpio-moran-332568348/" target="_blank" class="social-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="https://github.com/MichellPolicarpio" target="_blank" class="social-link"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de servicios profesionales -->
+        <section id="servicios" class="section services-section">
+            <div class="container">
+                <h2>Servicios Profesionales</h2>
+                <div class="services-grid">
+                    <!-- Tarjetas de servicios -->
+                    <div class="service-card">
+                        <i class="fas fa-code"></i>
+                        <h3>Desarrollo de Software</h3>
+                        <p>Desarrollo de aplicaciones y sistemas en C/C++, Java y Python. Soluciones eficientes y optimizadas para tus necesidades específicas.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-database"></i>
+                        <h3>Gestión de Bases de Datos</h3>
+                        <p>Diseño e implementación de bases de datos relacionales (MySQL, PostgreSQL) y NoSQL (MongoDB). Optimización de consultas y administración de datos.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Desarrollo Web</h3>
+                        <p>Creación de sitios web responsivos y modernos utilizando HTML, CSS y JavaScript. Interfaces intuitivas y experiencias de usuario optimizadas.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-chart-bar"></i>
+                        <h3>Análisis de Datos</h3>
+                        <p>Procesamiento y análisis de datos utilizando Python y herramientas especializadas. Visualización de datos y generación de informes detallados.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fab fa-apple"></i>
+                        <h3>Desarrollo de Aplicaciones Apple</h3>
+                        <p>Desarrollo de aplicaciones nativas para iOS, watchOS y iPadOS utilizando Swift. Creación de interfaces intuitivas y experiencias de usuario optimizadas para el ecosistema Apple.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de contacto -->
+        <section id="contacto" class="section contact-section">
+            <div class="container">
+                <h2>Contacto</h2>
+                <div class="contact-info">
+                    <!-- Tarjetas de contacto -->
+                    <div class="contact-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Teléfono</h3>
+                        <p><a href="tel:+522291360054">229 136 0054</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Correo Electrónico</h3>
+                        <p><a href="mailto:michellpolicarpio@gmail.com">michellpolicarpio@gmail.com</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Ubicación</h3>
+                        <p>Veracruz, México</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de certificaciones -->
+        <section id="certificaciones" class="section certifications-section">
+            <div class="container">
+                <h2>Certificaciones y Constancias</h2>
+                <!-- Tarjeta de certificación NASA -->
+                <div class="cert-card">
+                    <img src="Cert_NASA_mapm.jpg" alt="Certificado NASA Space Apps Challenge" class="cert-image">
+                    <div class="cert-info">
+                        <h3>NASA Space Apps Challenge 2024</h3>
+                        <p>Participante en la sede de Boca del Río, Veracruz</p>
+                    </div>
+                </div>
+                <!-- Tarjeta de Constancia Samsung -->
+                <div class="cert-card">
+                    <img src="Const_SIC_mapm.jpg" alt="Constancia Samsung Innovation Campus" class="cert-image">
+                    <div class="cert-info">
+                        <h3>Samsung Innovation Campus</h3>
+                        <p>Programa de Inteligencia Artificial y Habilidades de Liderazgo</p>
+                        <p>Impartido por la Universidad de Monterrey</p>
+                        <p>Duración: 150 horas</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Sección "Sobre Mí" del footer -->
+                <div class="footer-section">
+                    <h3>Sobre Mí</h3>
+                    <p>Michell Alexis Policarpio Moran</p>
+                    <p>Ingeniero en Informática</p>
+                    <p>Universidad Veracruzana (2021-2026)</p>
+                    <!-- Enlaces sociales del footer -->
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/michell-alexis-policarpio-moran-332568348/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/MichellPolicarpio" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <!-- Sección de servicios del footer -->
+                <div class="footer-section">
+                    <h3>Servicios Principales</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-code"></i> Desarrollo de Software</li>
+                        <li><i class="fas fa-database"></i> Gestión de Bases de Datos</li>
+                        <li><i class="fas fa-laptop-code"></i> Desarrollo Web</li>
+                        <li><i class="fas fa-chart-bar"></i> Análisis de Datos</li>
+                    </ul>
+                </div>
+                <!-- Sección de contacto del footer -->
+                <div class="footer-section">
+                    <h3>Contacto Rápido</h3>
+                    <ul class="footer-links">
+                        <li><a href="tel:+522291360054"><i class="fas fa-phone"></i> 229 136 0054</a></li>
+                        <li><a href="mailto:michellpolicarpio@gmail.com"><i class="fas fa-envelope"></i> michellpolicarpio@gmail.com</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Veracruz, México</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Copyright y derechos reservados -->
+            <div class="footer-bottom">
+                <p>&copy; 2024 Michell Alexis Policarpio Moran | Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script principal -->
+    <script src="main.js"></script>
+</body>
+</html> 
